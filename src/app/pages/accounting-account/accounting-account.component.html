@@ -1,0 +1,137 @@
+<!-- <div class="col-12">
+  <div class="card">
+      <div class="card-body">
+          <h4 class="card-title">Striped Table Accounting Account</h4>
+          <h6 class="card-subtitle">Add<code>.table-striped</code>for borders on all sides of the table and cells.</h6>
+          <td class="text-nowrap">
+            <p>Agregar una Cuenta Contable desde un archivo CSV
+            <button  class="btn btn-sm pointer" data-toggle="tooltip" (click) = "mostrarModal()" data-original-title="+ movimientos"><i class="fa fa-file-text text-default"></i> </button>
+
+            </p>
+        </td>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Nombre</th>
+                          <th>No de Cuenta</th>
+                          <th>Balance</th>
+                          <th class="text-nowrap">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody *ngFor ="let acc of accountingAccounts; let sub of acc.subCuentas">
+
+                    <tr>
+                         <td>{{acc.id}}</td>
+                          <td>{{acc.name}}</td>
+                          <td>
+                             {{acc.account}}
+                          </td>
+                          <td>{{acc.balance|currency}}</td>
+                          <td class="text-nowrap">
+                            <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                            <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>{{acc.subCuentas.id}}</td>
+                            <td>{{acc.nameSubAccount}}</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div> -->
+<td class="text-nowrap">
+  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+  <button  class="btn btn-sm pointer" data-toggle="tooltip" (click) = "mostrarModal()" data-original-title="+ movimientos"><i class="fa fa-file-text text-default"></i> </button>
+</td>
+
+<p id="demo">Click the button to change the text in this paragraph.</p>
+ <div *ngFor = "let acc of accountingAccounts; index as i">
+  <div class="row">
+    <div id="demo" class="col-md-5">
+      <a data-toggle="collapse" class="collapsed" [attr.data-target]="'#collapse' + i" href="#studies-collapse" aria-expanded="false" aria-controls="studies-collapse">
+        <h3> <i  [attr.id]="'#'+i" #id (click) ="isCollapsed(id)" class ="ti-zoom-in text-primary"></i> {{acc.name}}</h3>
+    </a>
+    </div>
+    <div class="col-md-2">
+     <h3>{{acc.account}}</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>{{acc.balance |currency}}</h3>
+    </div>
+    <div class="col-md-1">
+      <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+    </div>
+    <div class="col-md-1">
+      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"  (click)="sendData(acc)"></i> </a>
+    </div>
+  </div>
+
+  <div class="collapse"  [attr.id]="'collapse' + i"  data-parent="#menu">
+  <div *ngFor="let sub of acc.subCuentas" >
+    <div class= "row">
+
+    <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <h6>
+          {{sub.nameSubAccount}}
+        </h6>
+      </div>
+      <div class="col-md-3">
+        {{sub.subAccountNumber}}
+      </div>
+      <div class="col-md-3">
+        {{sub.subAccountBalance |currency}}
+      </div>
+      <div class="col-md-1">
+        <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+      </div>
+      <div class="col-md-1">
+        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="ti-plus text-danger"></i> </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+        <!-- <app-modal-subaccount></app-modal-subaccount> -->
+
+<!-- <div class="menu-horizontal container">
+  <div class="row menu-container" id="menu">
+      <div class="col-md-3 menu-item">
+          <a data-toggle="collapse" class="collapsed" data-target="#studies-collapse" href="#studies-collapse" aria-expanded="false" aria-controls="studies-collapse">
+              Studies
+          </a>
+          <div class="collapse1" id="studies-collapse1" data-parent="#menu">
+              <div class="container">
+                  <div class="row">
+                      Something...
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 menu-item">
+          <a data-toggle="collapse" class="collapsed" data-target="#research-collapse" href="#research-collapse" aria-expanded="false" aria-controls="research-collapse">
+              Research
+          </a>
+          <div class="collapse" id="research-collapse" data-parent="#menu">
+              <div class="container">
+                  <div class="row">
+                      Something...
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ -->
+
+

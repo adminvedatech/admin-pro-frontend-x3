@@ -1,0 +1,51 @@
+<p>bank-movement-csv works!</p>
+
+<p id="demo">Click the button to change the text in this paragraph.</p>
+ <div *ngFor = "let acc of bankMovementsCsv; index as i">
+  <div class="row">
+    <div id="demo" class="col-md-5">
+      <a data-toggle="collapse" class="collapsed" [attr.data-target]="'#collapse' + i" href="#studies-collapse" aria-expanded="false" aria-controls="studies-collapse">
+        <h3> <i  [attr.id]="'#'+i" #id (click) ="isCollapsed(id)" class ="ti-zoom-in text-primary"></i> {{acc.cuenta}}</h3>
+    </a>
+    </div>
+    <div class="col-md-2">
+     <h3>{{acc.descripcion}}</h3>
+    </div>
+    <div class="col-md-3">
+      <h3>{{acc.depositos |currency}}</h3>
+    </div>
+    <div class="col-md-1">
+      <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+    </div>
+    <div class="col-md-1">
+      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"></i> </a>
+    </div>
+  </div>
+
+  <div class="collapse"  [attr.id]="'collapse' + i"  data-parent="#menu">
+  <div *ngFor="let sub of acc.retiros" >
+    <div class= "row">
+
+    <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <h6>
+          {{sub.retiros}}
+        </h6>
+      </div>
+      <div class="col-md-3">
+        {{sub.retiros}}
+      </div>
+      <div class="col-md-3">
+        {{sub.retiros |currency}}
+      </div>
+      <div class="col-md-1">
+        <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+      </div>
+      <div class="col-md-1">
+        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="ti-plus text-danger"></i> </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>

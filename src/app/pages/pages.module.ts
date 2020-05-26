@@ -9,6 +9,12 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagenofoundComponent } from '../pagenofound/pagenofound.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { BankAccountsComponent } from './bank-accounts/bank-accounts.component';
+import { BankMovementCsvComponent } from './bank-accounts/bank-movement-csv/bank-movement-csv.component';
+import { BankMovementReconciledComponent } from './bank-accounts/bank-movement-reconciled/bank-movement-reconciled.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountingAccountComponent } from './accounting-account/accounting-account.component';
 
 
 @NgModule({
@@ -18,6 +24,10 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     GraphicsComponent,
     PagenofoundComponent,
     AccountSettingsComponent,
+    BankAccountsComponent,
+    BankMovementCsvComponent,
+    AccountingAccountComponent,
+    BankMovementReconciledComponent,
 
  ],
  exports:[
@@ -29,8 +39,12 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 
  ],
   imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    // FormsModule,
     SharedModule,
     PAGES_ROUTES
-  ]
+  ],
+  providers:[]
 })
 export class PagesModule { }

@@ -7,18 +7,32 @@ export class SidebarService {
 
   // menu: any[] = [];
 
-  menu: any = [
+  menu: any =
+  [
     {
       titulo: 'Bancos',
       icono: 'mdi mdi-gauge',
+      submenu:
+          [
+            { titulo: 'Dashboard', url: '/dashboard' },
+            { titulo : 'ProgressBar', url: '/progress' },
+            { titulo: 'Gráficas', url: '/graphics' },
+            { titulo: 'Promesas', url: '/promesas' },
+            { titulo: 'RxJs', url: '/rxjs' }
+          ]
+    },
+
+    {
+      titulo: 'Contabilidad',
+      icono: 'mdi mdi-gauge',
       submenu: [
-        { titulo: 'Dashboard', url: '/dashboard' },
-        { titulo : 'ProgressBar', url: '/progress' },
+        { titulo: 'Cuentas Contables', url: '/accounting-accounts' },
+        { titulo : 'Agregar Poliza', url: '/add-poliza' },
         { titulo: 'Gráficas', url: '/graphics' },
-        { titulo: 'Promesas', url: '/promesas' },
-        { titulo: 'RxJs', url: '/rxjs' }
+
       ]
-    }]
+    },
+  ]
   //   {
   //     titulo: 'Mantenimientos',
   //     icono: 'mdi mdi-folder-lock-open',

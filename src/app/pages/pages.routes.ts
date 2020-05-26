@@ -4,6 +4,7 @@ import { PagesComponent } from './pages.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { PagenofoundComponent } from '../pagenofound/pagenofound.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { AccountingAccountComponent } from './accounting-account/accounting-account.component';
 
 
 
@@ -19,6 +20,11 @@ const pagesRoutes: Routes = [
       path: 'graphics',
       component: GraphicsComponent,
       data: {titulo: 'Graficas'}
+    },
+    {
+      path: 'accounting-accounts',
+      component: AccountingAccountComponent,
+      data:{titulo: 'Cuentas Contables'}
     },
     {
       path: 'account-settings',
