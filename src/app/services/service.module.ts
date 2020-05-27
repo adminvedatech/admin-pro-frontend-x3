@@ -6,6 +6,9 @@ import { SidebarService } from './shared/sidebar.service';
 import { ModalUploadService } from './modal-upload/modal-upload.service';
 import { SubirArchivoService } from './modal-upload/subir-archivo.service';
 import { BankService } from './bankservice/bank.service';
+import { AccountingAccountService } from './accounting-accounts/accounting-account.service';
+import { ModalSubaccountService } from './accounting-accounts/modal-subaccount.service';
+import { FormSubaccountService } from './accounting-accounts/form-subaccount.service';
 
 
 
@@ -17,6 +20,9 @@ import { BankService } from './bankservice/bank.service';
   providers:[
     ModalUploadService,
     SubirArchivoService,
+    AccountingAccountService,
+    ModalSubaccountService,
+    FormSubaccountService,
     BankService,
     SettingsService,
     SharedService,

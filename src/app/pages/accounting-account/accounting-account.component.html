@@ -47,6 +47,7 @@
       </div>
   </div>
 </div> -->
+<h3>cuentas</h3>
 <td class="text-nowrap">
   <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
   <button  class="btn btn-sm pointer" data-toggle="tooltip" (click) = "mostrarModal()" data-original-title="+ movimientos"><i class="fa fa-file-text text-default"></i> </button>
@@ -70,7 +71,7 @@
       <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
     </div>
     <div class="col-md-1">
-      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"  (click)="sendData(acc)"></i> </a>
+      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"  (click)="showSubaccountModal()"></i> </a>
     </div>
   </div>
 
@@ -91,10 +92,11 @@
         {{sub.subAccountBalance |currency}}
       </div>
       <div class="col-md-1">
-        <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+        <p>show</p>
+        <button data-toggle="tooltip"(click) ="showModal()" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </button>
       </div>
       <div class="col-md-1">
-        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="ti-plus text-danger"></i> </a>
+        <a data-toggle="tooltip" (click) ="showModal()" data-original-title="Close"><i class="ti-plus"></i></a>
       </div>
     </div>
   </div>
@@ -102,36 +104,8 @@
 
 </div>
 
-        <!-- <app-modal-subaccount></app-modal-subaccount> -->
+        <app-modal-subaccount></app-modal-subaccount>
 
-<!-- <div class="menu-horizontal container">
-  <div class="row menu-container" id="menu">
-      <div class="col-md-3 menu-item">
-          <a data-toggle="collapse" class="collapsed" data-target="#studies-collapse" href="#studies-collapse" aria-expanded="false" aria-controls="studies-collapse">
-              Studies
-          </a>
-          <div class="collapse1" id="studies-collapse1" data-parent="#menu">
-              <div class="container">
-                  <div class="row">
-                      Something...
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-3 menu-item">
-          <a data-toggle="collapse" class="collapsed" data-target="#research-collapse" href="#research-collapse" aria-expanded="false" aria-controls="research-collapse">
-              Research
-          </a>
-          <div class="collapse" id="research-collapse" data-parent="#menu">
-              <div class="container">
-                  <div class="row">
-                      Something...
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
- -->
+
 
 

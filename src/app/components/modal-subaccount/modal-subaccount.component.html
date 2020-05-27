@@ -1,0 +1,31 @@
+<div class="modal-fade fondo-negro animated fadein" role="dialog" [ngClass] ="_modalSubaccount.isHidden">
+
+
+  <!-- <div class="modal" style="display: block;" tabindex="-1" role="dialog"> -->
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">SubAccount</h2>
+          <button type="button" class="btn btn-primary btn-sm" >
+            llenar poliza</button>
+          <button type="button" (click) ="closeModal()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+       <!-- ============================================================== -->
+       <!-- Comienza contenido del Modal  -->
+       <!-- ============================================================== -->
+
+          <app-form-subaccount></app-form-subaccount>
+
+       <!-- ============================================================== -->
+       <!-- Finaliza contenido del Modal  -->
+       <!-- ============================================================== -->
+
+        <div class="modal-footer">
+          <!-- <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button"  class="btn btn-primary">Enviar Archivo</button> -->
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->

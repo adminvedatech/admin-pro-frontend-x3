@@ -15,6 +15,9 @@ import { BankMovementReconciledComponent } from './bank-accounts/bank-movement-r
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountingAccountComponent } from './accounting-account/accounting-account.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { ModalSubaccountComponent } from '../components/modal-subaccount/modal-subaccount.component';
+import { FormSubaccountComponent } from '../components/modal-subaccount/form-subaccount/form-subaccount.component';
 
 
 @NgModule({
@@ -27,7 +30,9 @@ import { AccountingAccountComponent } from './accounting-account/accounting-acco
     BankAccountsComponent,
     BankMovementCsvComponent,
     AccountingAccountComponent,
-    BankMovementReconciledComponent,
+    ModalSubaccountComponent,
+    FormSubaccountComponent,
+    BankMovementReconciledComponent
 
  ],
  exports:[
@@ -35,13 +40,16 @@ import { AccountingAccountComponent } from './accounting-account/accounting-acco
     DashboardComponent,
      GraphicsComponent,
      PagenofoundComponent,
-     AccountSettingsComponent
+     AccountSettingsComponent,
+     ModalUploadComponent,
+     FormSubaccountComponent,
+     ModalSubaccountComponent,
 
  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    // FormsModule,
+    FormsModule,
     SharedModule,
     PAGES_ROUTES
   ],

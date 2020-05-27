@@ -5,25 +5,32 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { ModalSubaccountComponent } from '../components/modal-subaccount/modal-subaccount.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
+  declarations: [
+    BredcrumbsComponent,
+    SidebarComponent,
+    HeaderComponent,
+    ModalUploadComponent,
+  ],
+  exports:[
+    BredcrumbsComponent,
+    SidebarComponent,
+    HeaderComponent,
+    ModalUploadComponent,
+
+  ],
+
   imports:[
       RouterModule,
-      CommonModule
+      CommonModule,
+      FormsModule,
+      ReactiveFormsModule
   ],
-  declarations: [
-     BredcrumbsComponent,
-     SidebarComponent,
-     HeaderComponent,
-     ModalUploadComponent
- ],
- exports:[
- BredcrumbsComponent,
- SidebarComponent,
- HeaderComponent,
- ModalUploadComponent
-],
+
 
 })
 export class SharedModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalUploadService } from '../../services/modal-upload/modal-upload.service';
 import { AccountingAccountService } from '../../services/accounting-accounts/accounting-account.service';
 import { SubirArchivoService } from '../../services/modal-upload/subir-archivo.service';
+import { ModalSubaccountService } from 'src/app/services/accounting-accounts/modal-subaccount.service';
 // import { ModalSubaccountService } from '../../services/modal-subaccount/modal-subaccount.service';
 
 @Component({
@@ -20,6 +21,7 @@ export class AccountingAccountComponent implements OnInit {
   constructor(private _modalUpload: ModalUploadService,
               private _subirArchivo: SubirArchivoService,
               private _accounting: AccountingAccountService,
+              public _modalSubaccount: ModalSubaccountService
               // public _modalsubAccount: ModalSubaccountService
               ) { }
 
@@ -57,15 +59,16 @@ export class AccountingAccountComponent implements OnInit {
     })
   }
 
-  mostrarModalSubAccount(){
-    // this.sendData(acc.name);
-    this._modalsubAccount.mostrarModal();
-    // this._modalsubAccount.subAccount;
+  showSubaccountModal() {
+    console.log('SHOW MODAL');
+    this._modalSubaccount.mostrarModal();
+
   }
+
 
   sendData(acc){
    this._modalsubAccount.getData(acc);
-   this.mostrarModalSubAccount();
+  //  this.mostrarModalSubAccount();
    this._modalsubAccount.fillPolizaId();
   }
 
