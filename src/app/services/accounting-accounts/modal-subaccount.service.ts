@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 export class ModalSubaccountService {
 
   isHidden='ocultar';
-
+  cuentas: any;
   constructor() { }
 
-  mostrarModal(){
-    console.log('MOSTRAR');
-
+  mostrarModal(acc){
+    console.log('MOSTRAR', acc);
     this.isHidden = '';
+    this.cuentas = acc;
   }
 
   closeModal(){

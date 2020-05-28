@@ -59,9 +59,9 @@ export class AccountingAccountComponent implements OnInit {
     })
   }
 
-  showSubaccountModal() {
-    console.log('SHOW MODAL');
-    this._modalSubaccount.mostrarModal();
+  showSubaccountModal(acc) {
+    console.log('SHOW MODAL', acc);
+    this._modalSubaccount.mostrarModal(acc);
 
   }
 

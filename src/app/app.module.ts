@@ -15,6 +15,10 @@ import { AuthGuard } from './services/auth/auth.guard';
 import { AuthRequestOptions } from './services/auth/auth.request';
 import { ErrorhandlerService } from './services/interceptors/errorhandler.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+export let options: Partial<IConfig> | (() => Partial<IConfig>);
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(options),
     HttpClientModule,
     SharedModule,
     ServiceModule,

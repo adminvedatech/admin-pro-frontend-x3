@@ -68,10 +68,10 @@
       <h3>{{acc.balance |currency}}</h3>
     </div>
     <div class="col-md-1">
-      <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+      <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i></a>
     </div>
     <div class="col-md-1">
-      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"  (click)="showSubaccountModal()"></i> </a>
+      <a data-toggle="tooltip pointer" data-original-title="Agregar Subcuenta"> <i class="ti-plus text-info cursor"  (click)="showSubaccountModal(acc)"></i> </a>
     </div>
   </div>
 
@@ -92,11 +92,11 @@
         {{sub.subAccountBalance |currency}}
       </div>
       <div class="col-md-1">
-        <p>show</p>
-        <button data-toggle="tooltip"(click) ="showModal()" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </button>
+
+        <a data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-warning m-r-10"></i> </a>
       </div>
       <div class="col-md-1">
-        <a data-toggle="tooltip" (click) ="showModal()" data-original-title="Close"><i class="ti-plus"></i></a>
+        <a data-toggle="tooltip" data-original-title="Close"><i class="ti-plus"></i></a>
       </div>
     </div>
   </div>

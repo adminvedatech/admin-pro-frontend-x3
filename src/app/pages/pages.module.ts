@@ -18,7 +18,8 @@ import { AccountingAccountComponent } from './accounting-account/accounting-acco
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 import { ModalSubaccountComponent } from '../components/modal-subaccount/modal-subaccount.component';
 import { FormSubaccountComponent } from '../components/modal-subaccount/form-subaccount/form-subaccount.component';
-
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+export let options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FormSubaccountComponent } from '../components/modal-subaccount/form-sub
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxMaskModule.forRoot(options),
     SharedModule,
     PAGES_ROUTES
   ],

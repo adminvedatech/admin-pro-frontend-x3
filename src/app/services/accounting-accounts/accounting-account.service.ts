@@ -20,6 +20,16 @@ export class AccountingAccountService {
 
   private httpHeaders = new HttpHeaders();
 
+
+  createSubAccount(object: any): Observable<any> {
+    this.httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+      // url += '?token=' + this.token;
+      return this.http.post<any>(URL_SERVICIOS +
+          '/api/contabilidad/addSubAccount', object, {headers: this.httpHeaders})
+
+    }
+
+
   getAllAccounts(): Observable<any[]> {
     console.log('GET ALL ACCOUNTS TYPE');
      this.httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
