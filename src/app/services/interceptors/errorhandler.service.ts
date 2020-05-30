@@ -52,11 +52,11 @@ export class ErrorhandlerService implements ErrorHandler {
     if (error.status === 409) {
       console.log("ERROR 409 ", error.error);
 
-      // Swal.fire({
-      //   icon: "error",
-      //   text: error.error,
-      //   title: "Error en envio de datos"
-      // });
+      Swal.fire({
+        icon: "error",
+        text: error.error,
+        title: "Error en envio de datos"
+      });
     }
 
     if (error.status === 503) {

@@ -35,7 +35,7 @@
             <label for="exampleInputuname">Numero Subcuenta</label>
             <div class="input-group">
                 <div class="input-group-addon"><i class="ti-layers"></i></div>
-                <input type="text" (keyup)="verifyCode($event)" formControlName="subAccountNumber"  class="form-control" id="exampleInputuname" placeholder="Complete el numero">
+                <input type="text"  (keyup)="verifyCode($event)" [readonly] ="_formSubAccount.isReadOnly" formControlName="subAccountNumber" [dropSpecialCharacters]="false"  mask="000-00-00"  class="form-control" id="exampleInputuname" placeholder="Complete el numero">
               </div>
               <small class="form-control-feedback text-danger">Agrege solo dos digitos para completar el numero de la Subcuenta, verifique que no este duplicado </small>
          </div>
